@@ -14,7 +14,7 @@
         android:text="Login as Service Provider"
         android:textColor="#0B2342"
         android:textSize="18sp"
-        android:textStyle="bold"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.922"
@@ -78,7 +78,6 @@
         android:text="Login as Admin"
         android:textColor="#0B2342"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
