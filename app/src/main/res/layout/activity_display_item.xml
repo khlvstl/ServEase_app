@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".DisplayItem">
 
     <ImageView
@@ -17,24 +18,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_display"
+        android:textColor="#CAA218"
         android:textAlignment="center"/>
     <TextView
         android:id="@+id/item_price_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:textColor="#CAA218"
         android:layout_below="@+id/item_details_display"/>
 
     <Button
         android:id="@+id/order_shown_item"
         android:layout_width="410dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:layout_below="@id/item_price_display"
-        android:layout_marginTop="63dp"
-        android:backgroundTint="#e91e63"
+        android:layout_marginTop="65dp"
+        android:backgroundTint="#021D42"
+        android:background="@drawable/roundstyle"
         android:text="Place Order"
         android:textAlignment="center"
-        android:textColor="@color/whiteColor"
+        android:textColor="#FFDE59"
         android:textSize="18sp" />
 
 </RelativeLayout>

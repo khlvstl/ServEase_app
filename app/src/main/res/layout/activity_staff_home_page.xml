@@ -4,29 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".StaffHomePage">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="232dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/accpet_orders"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accept Orders to Deliver"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#CAA218"
+        android:text="Accept Service Bookings"
+        android:textColor="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
         android:id="@+id/current_order_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check Current Order Status"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#CAA218"
+        android:text="Check Current Bookings"
+        android:textColor="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
+        app:layout_constraintVertical_bias="0.7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

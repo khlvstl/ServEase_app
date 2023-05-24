@@ -5,33 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminHomePage"
-    android:background="@drawable/adminhomepage">
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="232dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.178"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:text="Hello, Admin."
+        android:textColor="#FFDE59"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
 
     <Button
         android:id="@+id/btn_add_staff"
-        android:layout_width="360dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#9c27b0"
-        android:text="Add staff"
-        android:textColor="#FFEB3B"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="#CAA218"
+        android:text="Add Service Provider"
+        android:textColor="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
         android:id="@+id/btn_add_stock"
-        android:layout_width="360dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#9c27b0"
+        android:layout_width="205dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#CAA218"
+        android:background="@drawable/roundstyle"
         android:text="Add Stock"
-        android:textColor="#FFEB3B"
+        android:textColor="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995" />
+        app:layout_constraintVertical_bias="0.7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
