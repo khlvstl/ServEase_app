@@ -29,11 +29,9 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        phoneno = (EditText) findViewById(R.id.logphone);
-        pass = (EditText) findViewById(R.id.logpass);
-        login = (Button) findViewById(R.id.btnlogin);
-        status=(TextView)findViewById(R.id.tvstatus);
-        status.setText("");
+        phoneno = (EditText) findViewById(R.id.email);
+        pass = (EditText) findViewById(R.id.pwd);
+        login = (Button) findViewById(R.id.btnsignin);
         //databaseCurrentUser= FirebaseDatabase.getInstance().getReference("getUserLogin");
 
         login.setOnClickListener(new View.OnClickListener() {
