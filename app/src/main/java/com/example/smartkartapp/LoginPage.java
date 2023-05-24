@@ -19,26 +19,26 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class LoginPage extends AppCompatActivity {
-    EditText phoneno, pass;
-    Button login;
+    EditText email, pass;
+    Button signin;
     TextView status;
-    String ph,pa;
+    String em,pa;
     static String tmpname;
     //static DatabaseReference databaseCurrentUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        phoneno = (EditText) findViewById(R.id.email);
+        email = (EditText) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.pwd);
-        login = (Button) findViewById(R.id.btnsignin);
+        signin = (Button) findViewById(R.id.btnsignin);
         //databaseCurrentUser= FirebaseDatabase.getInstance().getReference("getUserLogin");
 
-        login.setOnClickListener(new View.OnClickListener() {
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 RegisterPage.getuser();
-                ph = phoneno.getText().toString();
+                em = email.getText().toString();
                 pa = pass.getText().toString();
                 RegisterPage.databaseUsers.addValueEventListener(new ValueEventListener() {
                     @Override
