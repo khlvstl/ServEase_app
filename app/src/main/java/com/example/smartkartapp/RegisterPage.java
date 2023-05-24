@@ -2,6 +2,7 @@ package com.example.smartkartapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,9 +14,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterPage extends AppCompatActivity {
-    EditText etname,etphone,etpass;
+    EditText etname,etemail,etpwd;
     Button register;
     static DatabaseReference databaseUsers;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +25,8 @@ public class RegisterPage extends AppCompatActivity {
         databaseUsers= FirebaseDatabase.getInstance().getReference("memberReg");
         register=(Button)findViewById(R.id.btnregister);
         etname=(EditText)findViewById(R.id.etName);
-        etphone=(EditText)findViewById(R.id.etPhone);
-        etpass=(EditText)findViewById(R.id.etPassword);
+        etemail=(EditText)findViewById(R.id.etEmail);
+        etpwd=(EditText)findViewById(R.id.etPwd);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,17 +37,17 @@ public class RegisterPage extends AppCompatActivity {
     }
     public void reg(){
         String name=etname.getText().toString();
-        String phone=etphone.getText().toString();
-        String password=etpass.getText().toString();
+        String email=etemail.getText().toString();
+        String password=etpwd.getText().toString();
         if(TextUtils.isEmpty(name)){
             Toast.makeText(this,"Please write your name",Toast.LENGTH_SHORT).show();
-        }else if(TextUtils.isEmpty(phone)){
-            Toast.makeText(this,"Please write your phone no",Toast.LENGTH_SHORT).show();
+        }else if(TextUtils.isEmpty(email)){
+            Toast.makeText(this,"Please write your email",Toast.LENGTH_SHORT).show();
         }else if(TextUtils.isEmpty(password)){
             Toast.makeText(this,"Please write your password",Toast.LENGTH_SHORT).show();
         }else{
             String id=databaseUsers.push().getKey();
-            MemberReg memberReg=new MemberReg(id,name,password,phone);
+            MemberReg memberReg=new MemberReg(id,name,password,email);
             databaseUsers.child(id).setValue(memberReg);
             Toast.makeText(this,"User registered",Toast.LENGTH_SHORT).show();
         }

@@ -49,7 +49,7 @@ public class LoginPage extends AppCompatActivity {
                             String dpn = memberReg.getUsername();
                             String dph = memberReg.getPhone();
                             String dpa = memberReg.getPassword();
-                            if (dph.equals(ph) && dpa.equals(pa)) {
+                            if (dph.equals(em) && dpa.equals(pa)) {
                                 /*{
                                     String id=databaseCurrentUser.push().getKey();
                                     GetUserLogin getUserLogin=new GetUserLogin(dpn,dph,id);

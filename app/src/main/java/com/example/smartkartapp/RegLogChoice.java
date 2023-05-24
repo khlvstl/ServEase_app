@@ -19,7 +19,6 @@ public class RegLogChoice extends AppCompatActivity {
         log=(Button)findViewById(R.id.btnlog);
         admlog=(TextView)findViewById(R.id.admlog);
         stflog=(TextView)findViewById(R.id.stflog);
-        about=(TextView)findViewById(R.id.tvAbout);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +43,6 @@ public class RegLogChoice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RegLogChoice.this,StaffLogin.class));
-            }
-        });
-        about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegLogChoice.this,About.class));
             }
         });
     }
