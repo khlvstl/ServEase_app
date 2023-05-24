@@ -2,6 +2,7 @@ package com.example.smartkartapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,18 +14,19 @@ import android.widget.Toast;
 
 public class AdminLogin extends AppCompatActivity {
     EditText admuser,admpass;
-    Button admlog;
+    Button admsignin;
     TextView admstatus;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
         admuser=(EditText)findViewById(R.id.admuser);
-        admpass=(EditText)findViewById(R.id.admpass);
-        admlog=(Button)findViewById(R.id.admlogin);
+        admpass=(EditText)findViewById(R.id.admpwd);
+        admsignin=(Button)findViewById(R.id.admsignin);
         admstatus=(TextView)findViewById(R.id.admstatus);
         admstatus.setText("");
-        admlog.setOnClickListener(new View.OnClickListener() {
+        admsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!((TextUtils.isEmpty(admuser.getText().toString()))||(TextUtils.isEmpty(admpass.getText().toString())))){

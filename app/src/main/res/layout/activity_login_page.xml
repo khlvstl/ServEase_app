@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.897"
-        tools:ignore="MissingConstraints" />
+         />
 
     <EditText
         android:id="@+id/email"
@@ -44,7 +44,7 @@
         android:ems="10"
         android:hint="Email"
         android:padding="15dp"
-        android:textColor="#e91e63"
+        android:textColor="#021D42"
         android:textColorHint="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
         android:ems="10"
         android:hint="Password"
         android:padding="15dp"
-        android:textColor="#e91e63"
+        android:textColor="#021D42"
         android:textColorHint="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

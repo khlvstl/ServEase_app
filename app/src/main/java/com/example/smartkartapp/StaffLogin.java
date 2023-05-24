@@ -16,29 +16,29 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
 public class StaffLogin extends AppCompatActivity {
-    EditText stfname,stfpass;
-    TextView stfstatus;
-    Button stflogin;
+    EditText spuser,sppwd;
+    TextView spstatus;
+    Button spsignin;
     String sna,spa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_login);
-        stfname = (EditText) findViewById(R.id.stfname);
-        stfpass = (EditText) findViewById(R.id.stfpass);
-        stfstatus = (TextView) findViewById(R.id.stfstatus);
-        stflogin = (Button) findViewById(R.id.stflogin);
-        stfstatus.setText("");
-        stflogin.setOnClickListener(new View.OnClickListener() {
+        spuser = (EditText) findViewById(R.id.spuser);
+        sppwd = (EditText) findViewById(R.id.sppwd);
+        spstatus = (TextView) findViewById(R.id.spstatus);
+        spsignin = (Button) findViewById(R.id.spsignin);
+        spstatus.setText("");
+        spsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AddStaff.getStaff();
-                sna=stfname.getText().toString();
-                spa=stfpass.getText().toString();
+                sna=spuser.getText().toString();
+                spa=sppwd.getText().toString();
                 if(TextUtils.isEmpty(sna))
-                    stfstatus.setText("Please enter your name");
+                    spstatus.setText("Please enter your name");
                 else if(TextUtils.isEmpty(spa))
-                    stfstatus.setText("Please enter your password");
+                    spstatus.setText("Please enter your password");
                 else{
                     AddStaff.databaseStaff.addValueEventListener(new ValueEventListener() {
                         @Override
@@ -81,7 +81,7 @@ public class StaffLogin extends AppCompatActivity {
                                 }
                             }
                                 if(success==0)
-                                stfstatus.setText("Invalid Credentials");
+                                    spstatus.setText("Invalid Credentials");
                         }
 
                         @Override

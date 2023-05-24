@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterPage extends AppCompatActivity {
-    EditText etname,etemail,etpwd;
+    EditText etuname,etemail,etpwd;
     Button register;
     static DatabaseReference databaseUsers;
     @SuppressLint("MissingInflatedId")
@@ -24,7 +24,7 @@ public class RegisterPage extends AppCompatActivity {
         setContentView(R.layout.activity_register_page);
         databaseUsers= FirebaseDatabase.getInstance().getReference("memberReg");
         register=(Button)findViewById(R.id.btnregister);
-        etname=(EditText)findViewById(R.id.etName);
+        etuname=(EditText)findViewById(R.id.etuname);
         etemail=(EditText)findViewById(R.id.etEmail);
         etpwd=(EditText)findViewById(R.id.etPwd);
 
@@ -36,7 +36,7 @@ public class RegisterPage extends AppCompatActivity {
         });
     }
     public void reg(){
-        String name=etname.getText().toString();
+        String name=etuname.getText().toString();
         String email=etemail.getText().toString();
         String password=etpwd.getText().toString();
         if(TextUtils.isEmpty(name)){
