@@ -2,7 +2,7 @@ package com.example.smartkartapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,19 +14,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterPage extends AppCompatActivity {
-    EditText etuname,etemail,etpwd;
+    EditText etname, etphone, etpass;
     Button register;
     static DatabaseReference databaseUsers;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
-        databaseUsers= FirebaseDatabase.getInstance().getReference("memberReg");
-        register=(Button)findViewById(R.id.btnregister);
-        etuname=(EditText)findViewById(R.id.etuname);
-        etemail=(EditText)findViewById(R.id.etEmail);
-        etpwd=(EditText)findViewById(R.id.etPwd);
+        databaseUsers = FirebaseDatabase.getInstance().getReference("memberReg");
+        register = (Button) findViewById(R.id.btnregister);
+        etname = (EditText) findViewById(R.id.etuname);
+        etphone = (EditText) findViewById(R.id.etEmail);
+        etpass = (EditText) findViewById(R.id.etPwd);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,24 +35,34 @@ public class RegisterPage extends AppCompatActivity {
             }
         });
     }
-    public void reg(){
-        String name=etuname.getText().toString();
-        String email=etemail.getText().toString();
-        String password=etpwd.getText().toString();
-        if(TextUtils.isEmpty(name)){
-            Toast.makeText(this,"Please write your name",Toast.LENGTH_SHORT).show();
-        }else if(TextUtils.isEmpty(email)){
-            Toast.makeText(this,"Please write your email",Toast.LENGTH_SHORT).show();
-        }else if(TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Please write your password",Toast.LENGTH_SHORT).show();
-        }else{
-            String id=databaseUsers.push().getKey();
-            MemberReg memberReg=new MemberReg(id,name,password,email);
+
+    public void reg() {
+        String name = etname.getText().toString();
+        String phone = etphone.getText().toString();
+        String password = etpass.getText().toString();
+        if (TextUtils.isEmpty(name)) {
+            Toast.makeText(this, "Please Enter Name", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(phone)) {
+            Toast.makeText(this, "Please Enter Number", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "Please Enter Password", Toast.LENGTH_SHORT).show();
+        } else {
+            String id = databaseUsers.push().getKey();
+            MemberReg memberReg = new MemberReg(id, name, password, phone);
+            assert id != null;
             databaseUsers.child(id).setValue(memberReg);
-            Toast.makeText(this,"User registered",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "User registered", Toast.LENGTH_SHORT).show();
+            redirectToLoginPage();
         }
     }
-    public static void getuser(){
-        databaseUsers=FirebaseDatabase.getInstance().getReference("memberReg");
+
+    private void redirectToLoginPage() {
+        Intent intent = new Intent(RegisterPage.this, LoginPage.class);
+        startActivity(intent);
+        finish(); // Optional: If you want to finish the RegisterPage activity
+    }
+
+    public static void getuser() {
+        databaseUsers = FirebaseDatabase.getInstance().getReference("memberReg");
     }
 }

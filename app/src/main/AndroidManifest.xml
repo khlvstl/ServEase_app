@@ -18,8 +18,8 @@
         <activity android:name=".DisplayItem" />
         <activity android:name=".WomensClothing" />
         <activity android:name=".MensClothing" />
-        <activity android:name=".OtherItems" />
-        <activity android:name=".Books" />
+        <activity android:name=".Repairs" />
+        <activity android:name=".Cleaning" />
         <activity android:name=".Electronics" />
         <activity android:name=".Clothing" />
         <activity android:name=".CurrentOrderStatus" />

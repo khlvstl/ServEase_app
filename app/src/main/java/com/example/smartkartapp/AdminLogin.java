@@ -30,7 +30,7 @@ public class AdminLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!((TextUtils.isEmpty(admuser.getText().toString()))||(TextUtils.isEmpty(admpass.getText().toString())))){
-                    if (admuser.getText().toString().equals("smartkart")&&admpass.getText().toString().equals("appadmin123")){
+                    if (admuser.getText().toString().equals("servEaseAdmin")&&admpass.getText().toString().equals("password")){
                         Intent intent=new Intent(AdminLogin.this,AdminHomePage.class);
                         intent.putExtra("CALLINGACTIVITY","AdminLogin");
                         startActivity(intent);

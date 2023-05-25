@@ -24,4 +24,15 @@ public class StaffReg {
         return id;
     }
 
+    public void setStaffname(String staffname) {
+        this.staffname = staffname;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }

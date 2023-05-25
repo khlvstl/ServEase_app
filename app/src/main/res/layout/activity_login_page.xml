@@ -20,18 +20,18 @@
 
     <Button
         android:id="@+id/btnsignin"
-        android:layout_width="164dp"
-        android:layout_height="64dp"
+        android:layout_width="131dp"
+        android:layout_height="42dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#021D42"
         android:text="Sign In"
         android:textColor="#FFDE59"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897"
-         />
+        app:layout_constraintVertical_bias="0.865" />
 
     <EditText
         android:id="@+id/email"
@@ -43,7 +43,7 @@
         android:backgroundTint="#DFDFDF"
         android:ems="10"
         android:hint="Email"
-        android:padding="15dp"
+        android:padding="10dp"
         android:textColor="#021D42"
         android:textColorHint="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,22 +53,25 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/pwd"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="36dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#DFDFDF"
         android:ems="10"
         android:hint="Password"
-        android:padding="15dp"
+        android:inputType="textPassword"
+        android:padding="10dp"
         android:textColor="#021D42"
         android:textColorHint="#021D42"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
         android:id="@+id/signin"
@@ -78,14 +81,13 @@
         android:gravity="center"
         android:text="Sign In"
         android:textColor="#FFDE59"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387"
+        app:layout_constraintVertical_bias="0.457"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -93,6 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
+        android:layout_marginStart="48dp"
         android:gravity="center"
         android:text="Sign in to continue."
         android:textColor="#FFDE59"
@@ -100,7 +103,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
+        app:layout_constraintVertical_bias="0.506"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_marginStart="48dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#D6D6D6"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

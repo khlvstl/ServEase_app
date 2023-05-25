@@ -47,7 +47,7 @@ public class DisplayItem extends AppCompatActivity {
                     if(item_det.equals(item_details)){
                         if(stockReg.getCurrentStockAvailaible()==0){
                             orderShownItem.setEnabled(false);
-                            orderShownItem.setText("CURRENTLY OUT OF STOCK");
+                            orderShownItem.setText("UNAVAILABLE");
                         }
                     }
                 }
@@ -80,7 +80,7 @@ public class DisplayItem extends AppCompatActivity {
         final String spa=getIntent().getStringExtra("PASSWORD");
         final String ca=getIntent().getStringExtra("CALLING_ACTIVITY");
         if(ca.equals("Books")){
-            Intent intent=new Intent(DisplayItem.this,Books.class);
+            Intent intent=new Intent(DisplayItem.this, Cleaning.class);
             intent.putExtra("NAME",sna);
             intent.putExtra("PHONE",sph);
             intent.putExtra("PASSWORD",spa);
@@ -122,7 +122,7 @@ public class DisplayItem extends AppCompatActivity {
             intent.putExtra("PASSWORD",spa);
             startActivity(intent);
         }else if(ca.equals("OtherItems")){
-            Intent intent=new Intent(DisplayItem.this,OtherItems.class);
+            Intent intent=new Intent(DisplayItem.this, Repairs.class);
             intent.putExtra("NAME",sna);
             intent.putExtra("PHONE",sph);
             intent.putExtra("PASSWORD",spa);

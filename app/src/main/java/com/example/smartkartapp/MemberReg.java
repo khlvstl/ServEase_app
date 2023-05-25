@@ -29,4 +29,20 @@ public class MemberReg {
     public String getId() {
         return id;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
